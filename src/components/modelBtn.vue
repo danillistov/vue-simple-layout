@@ -12,8 +12,8 @@
                 <span>Список товаров:</span>
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-7 buy-list mx-1">
-                        <div id="todo-list-example">
+                    <div class="col-xl-12 buy-list mx-1">
+                        <div id="todo-list-example" >
                 <!-- <form v-on:submit.prevent="addNewTodo">
                 <label for="new-todo">Добавить задачу</label>
                    <input
@@ -28,6 +28,9 @@
       v-for="(todo, index) in todos"
       v-bind:key="todo.id"
       v-bind:title="todo.title"
+      v-bind:price="todo.price"
+      v-bind:count="todo.count"
+      v-bind:total="total"
       v-on:addNewTodo="addNewTodo"
       v-on:remove="todos.splice(index, 1)"
       v-bind:class="{'cart-list-item': isActive}"
@@ -35,8 +38,7 @@
     </ul>
 </div>
                     </div>
-                    <div class="col-xl-2 value-list mx-1"></div>
-                    <div class="col-xl-2 cancel-btn mx-1"></div>
+                   
                 </div>
             </div>
             </v-layout>
@@ -47,24 +49,45 @@
           <v-container grid-list-md>
             <v-layout wrap>
               <v-flex xs12 sm6 md4>
-                <v-text-field label="Legal first name*" required></v-text-field>
+                <v-text-field label="Имя*" required></v-text-field>
               </v-flex>
               <v-flex xs12 sm6 md4>
-                <v-text-field label="Legal middle name" hint="example of helper text only on focus"></v-text-field>
+                <v-text-field label="Фамилия*" ></v-text-field>
               </v-flex>
               <v-flex xs12 sm6 md4>
                 <v-text-field
-                  label="Legal last name*"
-                  hint="example of persistent helper text"
+                  label="Отчество"
+                  
                   persistent-hint
                   required
                 ></v-text-field>
               </v-flex>
               <v-flex xs12>
-                <v-text-field label="Email*" required></v-text-field>
+                <v-text-field label="Email*" required hint="Вам придет письмо с подтверждением заказа"></v-text-field>
               </v-flex>
               <v-flex xs12>
-                <v-text-field label="Password*" type="password" required></v-text-field>
+                <v-text-field label="Страна*"  required></v-text-field>
+              </v-flex>
+              <v-flex xs6>
+                <v-text-field label="Город*"  required></v-text-field>
+              </v-flex>
+              <v-flex xs6>
+                <v-text-field label="Улица*"  required></v-text-field>
+              </v-flex>
+              <v-flex xs4>
+                <v-text-field label="Дом*"  required></v-text-field>
+              </v-flex>
+                <v-flex xs4>
+                <v-text-field label="Корпус"  required></v-text-field>
+              </v-flex>
+                <v-flex xs4>
+                <v-text-field label="Квартира*"  required></v-text-field>
+              </v-flex>
+              <v-flex xs4>
+                <v-text-field label="Индекс*"  required></v-text-field>
+              </v-flex>
+               <v-flex xs8>
+                <v-text-field label="Контактный телефон*"  required></v-text-field>
               </v-flex>
             </v-layout>
           </v-container>
@@ -89,20 +112,21 @@ import second from "./AnotherCategory.vue"
         dialog: false,
         isActive: true,
         newTodoText: "",
-        price: "20$",
-        productName: "Наименование товара 1",
         nextTodoId: 0,
+        total: 0,
     todos: [
       {
         id: 0,
-        title: "Первый товар"
+        title: "Первый товар",
+        price: 20,
+        count: 3
       }
     ],
     nextTodoId: 1
       }
     },
     components: {cartItem,second},
-    props: ['title'],
+      props:['title','price','count','total'],
     methods: {
       remove: function() {
         return this.todos.splice(index, 1)
@@ -123,14 +147,17 @@ import second from "./AnotherCategory.vue"
 .buy-list { 
     height: 250px;
     overflow: auto;
+    background-color: #ECE7E7;
+    text-align: start;
 }
 .value-list {
-border: 1px solid black;
+background-color: #ECE7E7;
 height: 250px;
 }
 .cancel-btn {
     height: 250px;
-    border: 1px solid black;
+    background-color: #ECE7E7;
+    
 }
 .cart-list-item {
   list-style-type: none;

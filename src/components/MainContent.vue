@@ -3,18 +3,18 @@
         <div class="content1">
             <div class="container ">
                 <div class="row justify-content-center h-100">
-                    <div class="col-xl-3 col-12 col-sm-12 col-lg-12 mt-2 sell mx-2 d-flex align-items-end"><div class="sell_item"></div><div class="sell_item_button d-flex justify-content-center"><v-btn flat small class="btn_buy" >Заказать</v-btn></div></div>
-                    <div class="col-xl-3 col-12 col-sm-12 col-lg-12 mt-2 sell mx-2 d-flex align-items-end"><div class="sell_item"></div><div class="sell_item_button d-flex justify-content-center"><v-btn flat small class="btn_buy" >Заказать</v-btn></div></div>
-                    <div class="col-xl-3 col-12 col-sm-12 col-lg-12 mt-2 sell mx-2 d-flex align-items-end"><div class="sell_item"></div><div class="sell_item_button d-flex justify-content-center"><v-btn flat small class="btn_buy" >Заказать</v-btn></div></div>
-                    <div class="col-xl-3 col-12 col-sm-12 col-lg-12 mt-2 sell mx-2 d-flex align-items-end"><div class="sell_item"></div><div class="sell_item_button d-flex justify-content-center"><v-btn flat small class="btn_buy" >Заказать</v-btn></div></div>
-                    <div class="col-xl-3 col-12 col-sm-12 col-lg-12 mt-2 sell mx-2 d-flex align-items-end"><div class="sell_item"></div><div class="sell_item_button d-flex justify-content-center"><v-btn flat small class="btn_buy" >Заказать</v-btn></div></div>
-                    <div class="col-xl-3 col-12 col-sm-12 col-lg-12 mt-2 sell mx-2 d-flex align-items-end"><div class="sell_item"></div><div class="sell_item_button d-flex justify-content-center"><v-btn flat small class="btn_buy" >Заказать</v-btn></div></div>
-                    <div class="col-xl-3 col-12 col-sm-12 col-lg-12 mt-2 sell mx-2 d-flex align-items-end"><div class="sell_item"></div><div class="sell_item_button d-flex justify-content-center"><v-btn flat small class="btn_buy" >Заказать</v-btn></div></div>
-                    <div class="col-xl-3 col-12 col-sm-12 col-lg-12 mt-2 sell mx-2 d-flex align-items-end"><div class="sell_item"></div><div class="sell_item_button d-flex justify-content-center"><v-btn flat small class="btn_buy" >Заказать</v-btn></div></div>
-                    <div class="col-xl-3 col-12 col-sm-12 col-lg-12 mt-2 sell mx-2 d-flex align-items-end"><div class="sell_item"></div><div class="sell_item_button d-flex justify-content-center"><v-btn flat small class="btn_buy" >Заказать</v-btn></div></div>
-                    <div class="col-xl-3 col-12 col-sm-12 col-lg-12 mt-2 sell mx-2 d-flex align-items-end"><div class="sell_item"></div><div class="sell_item_button d-flex justify-content-center"><v-btn flat small class="btn_buy" >Заказать</v-btn></div></div>
-                     <div class="col-xl-3 col-12 col-sm-12 col-lg-12 mt-2 sell mx-2 d-flex align-items-end"><div class="sell_item"></div><div class="sell_item_button d-flex justify-content-center"><v-btn flat small class="btn_buy" >Заказать</v-btn></div></div>
-                    <div class="col-xl-3 col-12 col-sm-12 col-lg-12 mt-2 sell mx-2 d-flex align-items-end"><div class="sell_item"></div><div class="sell_item_button d-flex justify-content-center"><v-btn flat small class="btn_buy" >Заказать</v-btn></div></div>
+                    <div class="col-xl-3 col-12 col-sm-12 col-md-4 col-lg-4 mt-2 sell mx-2 d-flex align-items-end"><div class="sell_item"></div><div class="sell_item_button d-flex justify-content-center"><v-btn flat small class="btn_buy" >Заказать</v-btn></div></div>
+                    <div class="col-xl-3 col-12 col-sm-12 col-md-4 col-lg-4 mt-2 sell mx-2 d-flex align-items-end"><div class="sell_item"></div><div class="sell_item_button d-flex justify-content-center"><v-btn flat small class="btn_buy" >Заказать</v-btn></div></div>
+                    <div class="col-xl-3 col-12 col-sm-12 col-md-4 col-lg-4 mt-2 sell mx-2 d-flex align-items-end"><div class="sell_item"></div><div class="sell_item_button d-flex justify-content-center"><v-btn flat small class="btn_buy" >Заказать</v-btn></div></div>
+                    <div class="col-xl-3 col-12 col-sm-12 col-md-4 col-lg-4 mt-2 sell mx-2 d-flex align-items-end"><div class="sell_item"></div><div class="sell_item_button d-flex justify-content-center"><v-btn flat small class="btn_buy" >Заказать</v-btn></div></div>
+                    <div class="col-xl-3 col-12 col-sm-12 col-md-4 col-lg-4 mt-2 sell mx-2 d-flex align-items-end"><div class="sell_item"></div><div class="sell_item_button d-flex justify-content-center"><v-btn flat small class="btn_buy" >Заказать</v-btn></div></div>
+                    <div class="col-xl-3 col-12 col-sm-12 col-md-4 col-lg-4 mt-2 sell mx-2 d-flex align-items-end"><div class="sell_item"></div><div class="sell_item_button d-flex justify-content-center"><v-btn flat small class="btn_buy" >Заказать</v-btn></div></div>
+                    <div class="col-xl-3 col-12 col-sm-12 col-md-4 col-lg-4 mt-2 sell mx-2 d-flex align-items-end"><div class="sell_item"></div><div class="sell_item_button d-flex justify-content-center"><v-btn flat small class="btn_buy" >Заказать</v-btn></div></div>
+                    <div class="col-xl-3 col-12 col-sm-12 col-md-4 col-lg-4 mt-2 sell mx-2 d-flex align-items-end"><div class="sell_item"></div><div class="sell_item_button d-flex justify-content-center"><v-btn flat small class="btn_buy" >Заказать</v-btn></div></div>
+                    <div class="col-xl-3 col-12 col-sm-12 col-md-4 col-lg-4 mt-2 sell mx-2 d-flex align-items-end"><div class="sell_item"></div><div class="sell_item_button d-flex justify-content-center"><v-btn flat small class="btn_buy" >Заказать</v-btn></div></div>
+                    <div class="col-xl-3 col-12 col-sm-12 col-md-4 col-lg-4 mt-2 sell mx-2 d-flex align-items-end"><div class="sell_item"></div><div class="sell_item_button d-flex justify-content-center"><v-btn flat small class="btn_buy" >Заказать</v-btn></div></div>
+                    <div class="col-xl-3 col-12 col-sm-12 col-md-4 col-lg-4 mt-2 sell mx-2 d-flex align-items-end"><div class="sell_item"></div><div class="sell_item_button d-flex justify-content-center"><v-btn flat small class="btn_buy" >Заказать</v-btn></div></div>
+                    <div class="col-xl-3 col-12 col-sm-12 col-md-4 col-lg-4 mt-2 sell mx-2 d-flex align-items-end"><div class="sell_item"></div><div class="sell_item_button d-flex justify-content-center"><v-btn flat small class="btn_buy" >Заказать</v-btn></div></div>
                 </div>
             </div>
         </div>
@@ -45,6 +45,8 @@ html,body {
 }
 
 .sell {
+     position: relative;
+    
     height: 386px;
     background-color: #ECE7E7;
 }

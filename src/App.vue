@@ -4,9 +4,9 @@
     <div class="row" >
     <div class="col-xl-12 header d-flex align-items-center"> 
       <div class="row">
-      <div class="col-xl-1 col-12 menu_btn"><v-btn fab dark small><v-icon>menu</v-icon></v-btn></div>
-      <div class="col-xl-2 d-flex align-items-center">
-        <span class="company_name">Victoria's Cupcakes</span>
+      <div class="col-xl-1 col-12 menu-btn"><v-btn fab dark small v-on:click.prevent="menuPositionChange"><v-icon>menu</v-icon></v-btn></div>
+      <div class="col-xl-2 col-sm-3 col-md-4 d-flex align-items-center">
+        <span class="company-name">Victoria's Cupcakes</span>
         <div class="dropdown">
              <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">МЕНЮ
              <v-icon color="white">expand_more</v-icon>
@@ -18,7 +18,7 @@
   </div>
 </div>
       </div>
-      <div class="col-xl-4 offset-xl-5 col-12 search_form">
+      <div class="col-xl-4 col-sm-7 col-md-6 offset-xl-5 offset-md-2 offset-sm-2 col-12 search-form">
         <form>
          <dialoge></dialoge>
           <input type="text" class="search" placeholder="Поиск...">
@@ -31,16 +31,16 @@
   </div>
    <div class="container-fluid second-block ">
     <div class="row">
-    <div class="col-xl-2 main_menu">
+    <div class="main-menu" v-bind:class="{'col-xl-2': menuBar, 'col-xl-1': !menuBar}">
         <div class="row menu-list" >
-          <div class="col-xl-12 menu_name_item d-flex align-items-center"><span>Товары</span></div>
-          <div class="col-xl-12 menu_item d-flex align-items-center" v-bind:class="{ menu_item_active_version: isActive }" v-on:click='change()'><span>Категория товара</span></div>
-          <div class="col-xl-12 menu_item d-flex align-items-center" v-bind:class="{ menu_item_active_version: isActive1 }" v-on:click='change1()'><span>Категория товара</span></div>
-          <div class="col-xl-12 menu_item d-flex align-items-center" v-bind:class="{ menu_item_active_version: isActive2 }" v-on:click='change2()'><span>Категория товара</span></div>
-          <div class="col-xl-12 menu_item d-flex align-items-center" v-bind:class="{ menu_item_active_version: isActive3 }" v-on:click='change3()'><span>Категория товара</span></div>
+          <div class="col-xl-12 menu-name-item d-flex align-items-center"><span>Товары</span></div>
+          <div class="col-xl-12 menu-item d-flex align-items-center" v-bind:class="{ menu_item_active_version: isActive }" v-on:click='change()'><span>Категория товара</span></div>
+          <div class="col-xl-12 menu-item d-flex align-items-center" v-bind:class="{ menu_item_active_version: isActive1 }" v-on:click='change1()'><span>Категория товара</span></div>
+          <div class="col-xl-12 menu-item d-flex align-items-center" v-bind:class="{ menu_item_active_version: isActive2 }" v-on:click='change2()'><span>Категория товара</span></div>
+          <div class="col-xl-12 menu-item d-flex align-items-center" v-bind:class="{ menu_item_active_version: isActive3 }" v-on:click='change3()'><span>Категория товара</span></div>
       </div>
     </div>
-    <div class="col-xl-10 content h-100 ">
+    <div class=" content" v-bind:class="{'col-xl-10': menuBar, 'col-xl-11': !menuBar}">
       <main-content v-if="isActive"></main-content>
       <another v-if="isActive1"></another>
       <another-one v-if="isActive2"></another-one>
@@ -74,6 +74,7 @@ export default {
       fixed: false,
       isMove: false,
       isMenu: true,
+      menuBar: true
     }
   },
   methods: {
@@ -114,8 +115,22 @@ export default {
       window.scrollBy(0, -80);
       setTimeout(this.up, 10);
     }
+    },
+    menuPositionChange: function() {
+      if (this.menuBar){
+        this.menuBar = false;
+        console.log("тут у нас: " + this.menuBar);
+      } else if(!this.menuBar) {
+        this.menuBar = true;
+        console.log("а тут у нас: " + this.menuBar)
+      } 
+      console.log(this.menuBar)
+    },
+    check: function() {
+      console.log(this.menuBar)
     }
 },
+
   name: 'App'
 }
 </script>
@@ -139,7 +154,7 @@ export default {
 }
 .menu { 
   color: #fff;
-  position: sticky;
+
 }
 .dropdown-item {
  font-family: Roboto;
@@ -148,7 +163,7 @@ export default {
   background: #282828;
   color: #fff;
 }
-.main_menu_perent {
+.main-menu-perent {
   position: relative;
 }
  .header { 
@@ -173,7 +188,7 @@ z-index: -1;
 
 }*/
 
-.menu__name {
+.menu-name {
   color: #fff;
   margin: 10px;
   font-size: 20px;
@@ -184,7 +199,7 @@ z-index: -1;
   font-size: 16px;
   
 } */
-.menu_list_item {
+.menu-list-item {
   
   height: 50px;
   background-color:#282828;
@@ -198,7 +213,7 @@ z-index: -1;
   color: #282828; 
 }
 
-.main_menu {
+.main-menu {
   background-color: #282828;
   
 }
@@ -210,7 +225,7 @@ z-index: -1;
 .content {
   background-color: #fff;
 }
-.menu_item {
+.menu-item {
   background-color: #282828;
   height: 50px;
   font-family: Roboto;
@@ -227,7 +242,7 @@ z-index: -1;
   font-size: 16px;
   color:#282828;
 }
-.menu_name_item {
+.menu-name-item {
   color: #fff;
   height: 50px;
   font-family: Roboto;
@@ -242,10 +257,10 @@ height: 40px;
 border: 0px solid black;
 padding: 10px;
 }
-.search_bar {
+.search-bar {
   display: inline;
 }
-.search_form {
+.search-form {
 text-align: right;
 }
 /* убираем стандартную обводку  */
@@ -267,7 +282,7 @@ button::-moz-focus-inner {
    height: 71px;
    background-color:#ECE7E7;
  }
- .company_name {
+ .company-name {
    font-size: 20px;
    font-family: Roboto;
  }
@@ -281,13 +296,13 @@ button::-moz-focus-inner {
   .header {
     height: 100px;
   }
- .menu_btn {
+ .menu-btn {
    display: none;
  }
- .search_form {
+ .search-form {
    text-align: center;
  }
- .menu_item {
+ .menu-item {
    text-align: center;
  }
  .header {
@@ -299,12 +314,148 @@ button::-moz-focus-inner {
 .second-block {
   margin-top: 0px;
 }
-  .menu_name_item {
+  .menu-name-item {
   text-align: center;
 
 }
  }
-
+@media (min-width: 576px) and (max-width: 768px) { 
+   .header {
+    height: 70px;
+  }
+ .menu-btn {
+   display: none;
+ }
  
- </style>
+  .search_form {
+   position: relative;
+   top: 7px;
+ }
+ .header {
+   position: relative;
+ }
+ .menu-list{
+  position: relative;
+ 
+}
+ .menu-item {
+   text-align: center;
+ }
+.second-block {
+  margin-top: 0px;
+}
+  .menu-name-item {
+  text-align: center;
+}
+  }
+  @media (min-width: 768px) and (max-width: 908px){
+     .menu-item {
+   text-align: center;
+ }
+     .header {
+    height: 70px;
+  }
+ .menu-btn {
+   display: none;
+ }
+ 
+  .search-form {
+   position: relative;
+   top: 7px;
+ }
+ .header {
+   position: relative;
+ }
+ .menu-list{
+  position: relative;
+ 
+}
+.second-block {
+  margin-top: 0px;
+}
+  .menu-name-item {
+  text-align: center;
+}
+  }
+  @media (min-width: 908px) and (max-width: 1024px) {
+     .menu-item {
+   text-align: center;
+ }
+     .header {
+    height: 70px;
+  }
+ .menu-btn {
+   display: none;
+ }
+ 
+  .search-form {
+   position: relative;
+ }
+ .header {
+   position: relative;
+ }
+ .menu-list{
+  position: relative;
+ 
+}
+.second-block {
+  margin-top: 0px;
+}
+  .menu-name-item {
+  text-align: center;
+}
+  }
+  @media (min-width: 1024px) and (max-width: 1199px) { 
+   .header {
+    height: 70px;
+  }
+ .menu-btn {
+   display: none;
+ }
+ 
+  .search-form {
+   position: relative;
+
+ }
+ .header {
+   position: relative;
+ }
+ .menu-list{
+  position: relative;
+ 
+}
+ .menu-item {
+   text-align: center;
+ }
+.second-block {
+  margin-top: 0px;
+}
+  .menu-name-item {
+  text-align: center;
+}
+  }
+  @media (min-width: 1200px) and (max-width: 1817px) {
+  .header {
+    height: 70px;
+  }
+ .menu-btn {
+  position: relative;
+  top: 7px;
+ }
+ 
+  .search-form {
+   position: relative;
+   top: 7px;
+
+ }
+ .header {
+  position: fixed;
+  z-index: 3;
+ }
+.menu-list{
+  position: fixed;
+}
+  }
+  
+ </style> 
  
